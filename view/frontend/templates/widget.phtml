@@ -1,0 +1,23 @@
+<?php
+// Get current full action name.
+$fullAction = $block->getRequest()->getFullActionName();
+
+// Pages where the widget must NOT be rendered.
+$deny = [
+    'checkout_cart_index',
+    'checkout_index_index',
+];
+
+if (in_array($fullAction, $deny, true)) {
+    return;
+}
+?>
+
+<botario-chat
+    bot-id="671a013cdc26d358ff25efe0"
+    api-url="https://gpt.steinbach.botario.com/static/chat-client/">
+</botario-chat>
+
+<script type="module"
+        src="https://gpt.steinbach.botario.com/static/chat-widget/chat-widget.js">
+</script>
