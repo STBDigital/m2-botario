@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="botario" translate="label" sortOrder="1100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Botario</label>
+            <tab>general</tab>
+            <resource>STBDigital_Botario::config</resource>
+
+            <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+
+                <field id="enabled" translate="label" type="select" sortOrder="10"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="bot_id" translate="label" type="text" sortOrder="20"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Bot ID</label>
+                    <validate>required-entry</validate>
+                    <comment>Example: 671a013cdc26d358ff25efe0</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+
+                <field id="api_url" translate="label" type="text" sortOrder="30"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>API URL</label>
+                    <validate>required-entry</validate>
+                    <comment>Example: https://gpt.xxx.botario.com/static/chat-client/</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+
+                <field id="js_module_url" translate="label" type="text" sortOrder="40"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>JS Module URL</label>
+                    <validate>required-entry</validate>
+                    <comment>Example: https://gpt.xxx.botario.com/static/chat-widget/chat-widget.js</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="deny_handles" translate="label" type="textarea" sortOrder="50"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Deny list (fullActionName)</label>
+                    <comment>
+                        One per line or comma-separated. Example: checkout_cart_index, checkout_index_index
+                    </comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+
+            </group>
+        </section>
+    </system>
+</config>
