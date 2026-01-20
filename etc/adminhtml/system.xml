@@ -9,13 +9,13 @@
 
         <section id="botario_config" translate="label" type="text" sortOrder="10"
                  showInDefault="1" showInWebsite="1" showInStore="1">
-            <label>Botario</label>
+            <label>General</label>
             <tab>botario_tab</tab>
             <resource>STBDigital_Botario::config</resource>
 
             <group id="general" translate="label" sortOrder="10"
                    showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>General</label>
+                <label>Chat Bot Integration</label>
 
                 <field id="enabled" translate="label" type="select" sortOrder="10"
                        showInDefault="1" showInWebsite="1" showInStore="1">
