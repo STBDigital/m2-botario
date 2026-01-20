@@ -8,7 +8,6 @@ use STBDigital\Botario\Model\Config;
 
 class Widget extends Template
 {
-    // Keep comments in English as requested.
     public function __construct(
         Template\Context $context,
         private readonly Config $config,

@@ -8,11 +8,11 @@ use Magento\Store\Model\ScopeInterface;
 
 class Config
 {
-    private const XML_PATH_ENABLED = 'botario/general/enabled';
-    private const XML_PATH_BOT_ID = 'botario/general/bot_id';
-    private const XML_PATH_API_URL = 'botario/general/api_url';
-    private const XML_PATH_JS_MODULE_URL = 'botario/general/js_module_url';
-    private const XML_PATH_DENY_HANDLES = 'botario/general/deny_handles';
+    private const XML_PATH_ENABLED = 'botario_config/general/enabled';
+    private const XML_PATH_BOT_ID = 'botario_config/general/bot_id';
+    private const XML_PATH_API_URL = 'botario_config/general/api_url';
+    private const XML_PATH_JS_MODULE_URL = 'botario_config/general/js_module_url';
+    private const XML_PATH_DENY_HANDLES = 'botario_config/general/deny_handles';
 
     public function __construct(
         private readonly ScopeConfigInterface $scopeConfig
