@@ -58,7 +58,7 @@
 
                 <field id="collapsed" translate="label" type="select" sortOrder="60"
                        showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Open widget on page load</label>
+                    <label>Close widget on page load</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
 
