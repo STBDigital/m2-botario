@@ -9,6 +9,7 @@ use Magento\Store\Model\ScopeInterface;
 class Config
 {
     private const XML_PATH_ENABLED = 'botario_config/general/enabled';
+    private const XML_PATH_COLLAPSED = 'botario_config/general/collapsed';
     private const XML_PATH_BOT_ID = 'botario_config/general/bot_id';
     private const XML_PATH_API_URL = 'botario_config/general/api_url';
     private const XML_PATH_JS_MODULE_URL = 'botario_config/general/js_module_url';
@@ -21,6 +22,11 @@ class Config
     public function isEnabled(?int $storeId = null): bool
     {
         return $this->scopeConfig->isSetFlag(self::XML_PATH_ENABLED, ScopeInterface::SCOPE_STORE, $storeId);
+    }
+
+    public function isCollapsed(?int $storeId = null): bool
+    {
+        return $this->scopeConfig->isSetFlag(self::XML_PATH_COLLAPSED, ScopeInterface::SCOPE_STORE, $storeId);
     }
 
     public function getBotId(?int $storeId = null): string

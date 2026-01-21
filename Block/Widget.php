@@ -21,6 +21,11 @@ class Widget extends Template
         return $this->config->isEnabled((int)$this->_storeManager->getStore()->getId());
     }
 
+    public function isCollapsed(): bool
+    {
+        return $this->config->isCollapsed((int)$this->_storeManager->getStore()->getId());
+    }
+
     public function getBotId(): string
     {
         return $this->config->getBotId((int)$this->_storeManager->getStore()->getId());
