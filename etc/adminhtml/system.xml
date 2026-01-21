@@ -58,10 +58,8 @@
 
                 <field id="collapsed" translate="label" type="select" sortOrder="60"
                        showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Setting for collapse widget on page load</label>
-                    <depends>
-                        <field id="enabled">1</field>
-                    </depends>
+                    <label>Open widget on page load</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
 
             </group>
