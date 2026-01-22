@@ -22,7 +22,7 @@ if ($botId === '' || $apiUrl === '' || $jsUrl === '') {
 ?>
 
 
-<botario-chat <?= $block->isCollapsed() ? '' : 'open="true"'?>
+<botario-chat <?= $block->isCollapsed() ? '' : 'open="true" expanded="false"'?>
               bot-id="<?= $block->escapeHtmlAttr($botId) ?>"
               api-url="<?= $block->escapeHtmlAttr($apiUrl) ?>"></botario-chat>
 
